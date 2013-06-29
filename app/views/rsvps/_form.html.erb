@@ -22,7 +22,10 @@
   </div>
   <div class="field">
     <%= f.label :going %>?<br />
-    <%= f.check_box :going %>
+    <!-- <span> -->
+      yes <%= f.radio_button :going, "1" %>
+      no  <%= f.radio_button :going, "0" %>
+    <!-- </span> -->
   </div>
   <div class="actions">
     <%= f.submit %>
