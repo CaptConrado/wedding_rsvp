@@ -1,7 +1,9 @@
 Wedding::Application.routes.draw do
   resources :rsvps
 
+  root :to => 'rsvps#new'
 
+  match '/whosecoming' => 'rsvps#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

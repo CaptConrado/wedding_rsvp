@@ -1,20 +1,16 @@
+<center>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @rsvp.name %>
-</p>
+<h1>Thank You! <%= @rsvp.name %></h1>
 
-<p>
-  <b>Email:</b>
+
+
   <%= @rsvp.email %>
-</p>
 
-<p>
-  <b>Going:</b>
-  <%= @rsvp.going %>
-</p>
+<br><br><br><br><br>
 
 
-<%= link_to 'Edit', edit_rsvp_path(@rsvp) %> |
-<%= link_to 'Back', rsvps_path %>
+
+<h1><%= link_to 'Make a mistake?', edit_rsvp_path(@rsvp) %></h1> 
+
+</center>
