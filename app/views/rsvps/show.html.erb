@@ -1,13 +1,21 @@
 <center>
 <p id="notice"><%= notice %></p>
 
-<h1>Thank You! <%= @rsvp.name %></h1>
+<h1>Thank You <%= @rsvp.name %>!</h1>
 
 
 
   <%= @rsvp.email %>
 
 <br><br><br><br><br>
+
+<% if @rsvp.going == true %>
+    
+      <h2> save the date </h2>
+<% else %> 
+
+ 		<h2>Pleasee!</h2> 
+<% end %>
 
 
 

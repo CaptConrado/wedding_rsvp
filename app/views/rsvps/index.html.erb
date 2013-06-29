@@ -2,7 +2,8 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
     <th>Email</th>
     <th>Going</th>
     <th></th>
@@ -13,6 +14,7 @@
 <% @rsvps.each do |rsvp| %>
   <tr>
     <td><%= rsvp.name %></td>
+    <td><%= rsvp.last_name %></td>
     <td><%= rsvp.email %></td>
     <td><%= rsvp.going %></td>
     <td><%= link_to 'Show', rsvp %></td>
