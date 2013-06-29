@@ -1,24 +1,34 @@
 <center>
 <p id="notice"><%= notice %></p>
 
-<h1>Thank You <%= @rsvp.name %>!</h1>
 
-
-
-  <%= @rsvp.email %>
 
 <br><br><br><br><br>
 
-<% if @rsvp.going == true %>
-    
-      <h2> save the date </h2>
-<% else %> 
+<% if @rsvp.going == true %>  
+	<h1>Thank You <%= @rsvp.name %>!</h1>
+	<h2>See you there!</h2><br>
+    <h3> Save the date </h3>
+      <% 
+      		today = Time.now
+      		wedding_day = Time.new(2013,8,19,11,37,0,"-06:00")
+			days_left = Time.at(today)
 
- 		<h2>Pleasee!</h2> 
+			  %>
+
+			  <p>Wedding day <%= wedding_day.strftime("%B %-d %Y ") %></p>
+			  
+<% else %> 
+	<h1>Thank You <%= @rsvp.name %>!</h1>
+ 	<h2>Let us know if you change your mind.</h2> 
+ 		<h3>hostsemail@email.com</h3>
+ 		<br>
+ 		<h3><%= link_to 'I made a mistake', edit_rsvp_path(@rsvp) %></h3>
 <% end %>
 
 
 
-<h1><%= link_to 'Make a mistake?', edit_rsvp_path(@rsvp) %></h1> 
+
+ 
 
 </center>
