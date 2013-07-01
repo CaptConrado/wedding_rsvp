@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130629021149) do
+ActiveRecord::Schema.define(:version => 20130701064418) do
+
+  create_table "locations", :force => true do |t|
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "rsvps", :force => true do |t|
     t.string   "name"

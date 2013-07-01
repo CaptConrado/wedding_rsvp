@@ -8,6 +8,14 @@ class RsvpsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @rsvps }
     end
+
+    
+    if params[:search].present?
+    @locations = Location.near(params[:search], 50, :order => :distance)
+      else
+    @locations = Location.all
+    end
+
   end
 
   # GET /rsvps/1

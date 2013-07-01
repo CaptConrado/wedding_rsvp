@@ -1,4 +1,7 @@
 Wedding::Application.routes.draw do
+  resources :locations
+
+
   resources :rsvps
 
   root :to => 'rsvps#new'
