@@ -11,9 +11,9 @@ class RsvpsController < ApplicationController
 
     
     if params[:search].present?
-    @locations = Location.near(params[:search], 50, :order => :distance)
-      else
-    @locations = Location.all
+      @locations = Location.near(params[:search], 50, :order => :distance)
+       else
+      @locations = Location.all
     end
 
   end

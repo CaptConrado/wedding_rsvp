@@ -17,6 +17,9 @@
 			  %>
 
 			  <p>Wedding day <%= wedding_day.strftime("%B %-d %Y ") %></p>
+			  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{Location.first.latitude}%2C#{Location.first.longitude}" %>
+
+
 			  
 <% else %> 
 	<h1>Thank You <%= @rsvp.name %>!</h1>
@@ -26,8 +29,6 @@
  		<h3><%= link_to 'I made a mistake', edit_rsvp_path(@rsvp) %></h3>
 <% end %>
 
-
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{Location.first.latitude}%2C#{Location.first.longitude}" %>
 
 
 </ul>
